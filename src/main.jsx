@@ -17,7 +17,7 @@ import { MdStopScreenShare } from "react-icons/md";
 import { FiRadio } from "react-icons/fi";
 import "./styles.css";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5008";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "https://wicz-backend.onrender.com";
 const socket = io(SOCKET_URL, { autoConnect: false, transports: ["websocket", "polling"] });
 
 function makeUid() {
@@ -113,8 +113,9 @@ function App() {
         frameRate: { ideal: 60, max: 60 }
       },
       audio: true
+
     });
-localStreamRef.current = stream;
+  localStreamRef.current = stream;
     
     setIsSharing(true);
     setAudioAvailable(stream.getAudioTracks().length > 0);
