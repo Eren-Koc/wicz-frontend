@@ -68,7 +68,7 @@ const Meeting = ({roomsUsersCount,setRoomsUsersCount,style,currentQuestion,setCu
     try {
       const stream = await navigator.mediaDevices.getDisplayMedia({
         video: {
-          frameRate: { ideal: 30, max: 60 },
+          frameRate: { ideal: 60, max: 60 },
           width: { ideal: 1920 },
           height: { ideal: 1080 }
         },

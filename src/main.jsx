@@ -458,15 +458,12 @@ function App() {
         <video ref={remoteVideoRef} autoPlay playsInline className="viewer-video" />
         <div className="viewer-gradient" />
         <header className="viewer-topbar">
-          <div className="brand light"><span className="brand-mark"><FiRadio /></span> Görüşelim</div>
+        <div className="viewer-count dark"><HiOutlineUsers /> {viewerCount} izleyici</div>
           <div className="viewer-live"><span className="live-dot" /> CANLI <span className="code-small">#{activeCode}</span></div>
           <button className="viewer-exit" onClick={leaveEverything}><HiOutlineArrowLeft /> Çık</button>
         </header>
         {needsSoundClick && <button className="sound-unlock" onClick={enableSound}><HiOutlineVolumeUp /> Sesi Aç</button>}
-        <div className="viewer-bottom">
-          <div><span className="watching-dot" /> Canlı ekran paylaşımı</div>
-          <div className="viewer-count dark"><HiOutlineUsers /> {viewerCount} izleyici</div>
-        </div>
+     
       </div>
     );
   }
